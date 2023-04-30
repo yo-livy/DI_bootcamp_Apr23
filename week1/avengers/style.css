@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Marvel', sans-serif;
+}
+
+body {
+    background-image: url("https://wallpapercave.com/wp/wp8989613.jpg");
+    background-size: cover;
+}
+
+header {
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100vw;
+}
+
+nav img {
+    float: left;
+    height: 60px;
+    width: auto;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+ul {
+    float: right;
+    margin-right: 100px;
+}
+
+li {
+    display: inline-block;
+    padding: 20px 20px;
+    font-size: 24px;
+    color: white;
+}
+
+section h1 {
+    font-size: 104px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+    padding-top: 100px;
+}
+
+section p {
+    font-size: 24px;
+    width: 600px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    margin-left: 80px;
+    line-height: 1.5;
+    margin-bottom: 500px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+}
+
+footer div {
+    width: 960px;
+    margin: 0 auto;
+}
+
+footer div a {
+    color: white;
+}

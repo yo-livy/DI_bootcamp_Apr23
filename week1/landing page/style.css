@@ -81,8 +81,8 @@ footer {
 i {
     font-size: 80px;
     color: rgb(53,121,246);
-    display: block;
 }
+/* how to make block from i  and how to copy link to other icons (light ones)*/
 
 .item {
     display: inline-block;
