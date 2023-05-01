@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+img {
+    width: 20vw;
+    margin-bottom: 20px;
+}
+
+section > div {
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.discount {
+    font-size: 0.8rem;
+    text-decoration:line-through;
+    color: grey;
+    display: inline-block;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+    display: inline-block;
+}
+
+div > * {
+    margin-bottom: 15px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(198,59,52);
+    position: absolute;
+}
+
+.new {
+    top: 7%;
+    left: 10%;
+    background-color: rgb(74,158,134);
+}
+
+.new p, .disc p {
+    margin: 16px auto;
+    color: white;
+    font-weight: bold;
+}
+
+.disc {
+    top: 7%;
+    left: 70%;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: 1px solid lightgray;
+    background-color: transparent;
+}
+
+section {
+    margin: 40px;
+}
