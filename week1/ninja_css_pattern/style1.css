@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    gap: 2px;
+}
+
+.item {
+    width: 25px;
+    height: 25px;
+}
+
+.grey1 {
+    background-color:rgb(204,204,204);
+}
+.grey2 {
+    background-color:rgb(153,153,153);
+}
+.grey3 {
+    background-color:rgb(97,97,97);
+}
+.grey4 {
+    background-color:rgb(49,49,49);
+}

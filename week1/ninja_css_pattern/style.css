@@ -10,7 +10,7 @@ body {
     grid-template-rows: repeat(16, 1fr);
     border: 1px solid red;
     width:fit-content;
-    height: fit-content;
+    height:fit-content;
     gap: 2px;
     padding: 1px;
 }
