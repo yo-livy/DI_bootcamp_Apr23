@@ -25,18 +25,23 @@ h1 {
 
 .numbers {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 50px 150px;
-    padding: 50px;
     align-items: center;
+}
+
+.numbers:nth-child(3) {
+    align-self: center;
 }
 
 .cardset {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 50px 100px;
-    padding: 50px;
+    margin: 150px 100px;
     align-items: center;
+    gap: 10px;
 }
 
 .numbercard {
@@ -45,10 +50,25 @@ h1 {
 
 .card {
     text-align: center;
-    padding: 25px;
 }
 
-.card > * {
-    padding: 30px;
+.card {
+    width: 15rem;
+    height: 10rem;
+}
+.card .name {
+    width: 15em;
+    height: 10rem;
 }
 
+.big_number {
+    font-size: 42px;
+    font-weight: bold;
+    color: rgb(95,106,190);
+    padding: 20px;
+}
+
+.numbercard p {
+    font-weight: 600;
+    color: grey;
+}
