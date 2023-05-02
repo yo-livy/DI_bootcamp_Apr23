@@ -1,0 +1,43 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    border: 1px solid red;
+    height: 50vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    background-color: yellow;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.one {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    border: 1px solid red;
+    justify-content: space-between;
+}
+
+.two {
+    display: flex;
+    border: 1px solid red;
+    width: 60vw;
+    justify-content: space-between;
+}
+
+.three {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    border: 1px solid red;
+    justify-content: space-between;
+}
