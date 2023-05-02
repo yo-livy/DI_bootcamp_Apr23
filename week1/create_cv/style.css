@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto auto auto;
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    /* border: 1px solid black; */
+    padding: 25px;
+}
+
+.left {
+    height: 100%;
+    grid-row: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(247, 251, 218);
+}
+
+.profile {
+    padding-top: 100px;
+}
+
+.photo {
+    width: 350px;
+    clip-path: circle();
+    margin-top: 200px;
+    padding:0;
+}
+
+.name {
+    font-size: 2.8rem;
+}
+
+.left hr {
+    width: 60%;
+}
+
+i {
+    font-size: 35px;
+    padding: 20px;
+    color: lightgray;
+}
+
+.lists {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 50px;
+}
+
+.list1, .list2 {
+    line-height: 2;
+    padding: 0;
+}
