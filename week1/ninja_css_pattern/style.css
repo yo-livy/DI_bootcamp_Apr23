@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border: 1px solid red;
+    width:fit-content;
+    height: fit-content;
+    gap: 2px;
+    padding: 1px;
+}
+.item {
+    width: 25px;
+    height: 25px;
+}
+.orange {
+    background-color: rgb(237,121, 48);
+}
+.yellow {
+    background-color: rgb(232,178, 118);
+}
+.brown {
+    background-color: rgb(151,76, 27);
+}
