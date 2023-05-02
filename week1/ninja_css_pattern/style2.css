@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.columns {
+    display: flex;
+    width: 600px;
+    height: 400px;
+    border: 1px solid red;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.item {
+    width: 40px;
+    height: 400px;
+    background-color: rgba(199,74,66,0.5);
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    border: 1px solid red;
+    justify-content:center;
+    gap: 40px;
+}
+
+.item1 {
+    width: 600px;
+    height: 40px;
+    background-color: rgba(199,74,66,0.5);
+}
