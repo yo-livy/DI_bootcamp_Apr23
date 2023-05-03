@@ -5,7 +5,9 @@
 }
 
 body {
-    background-color: azure;
+    background-image: url("https://images.pexels.com/photos/776656/pexels-photo-776656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +15,7 @@ body {
 }
 
 div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 h1 {
@@ -31,34 +33,27 @@ h1 {
     align-items: center;
 }
 
-.numbers:nth-child(3) {
-    align-self: center;
-}
-
 .cardset {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 150px 100px;
-    align-items: center;
+    align-items:start;
     gap: 10px;
+    height: fit-content;
 }
 
 .numbercard {
     text-align: center;
+    background-color: transparent
+
 }
 
 .card {
     text-align: center;
-}
-
-.card {
-    width: 15rem;
-    height: 10rem;
-}
-.card .name {
-    width: 15em;
-    height: 10rem;
+    width: 20rem;
+    height: fit-content;
+    padding: 20px;
 }
 
 .big_number {
@@ -71,4 +66,67 @@ h1 {
 .numbercard p {
     font-weight: 600;
     color: grey;
+}
+
+.corrine {
+    margin-top: 100px;
+}
+
+.chris {
+    margin-top: 50px;
+}
+
+.tina {
+
+}
+
+.desc, .name {
+    padding: 15px;
+}
+
+.name {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    font-size: 0.8rem;
+    position: relative;
+    font-weight: 600;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.textname {
+    font-weight: 300;
+    line-height: 2;
+}
+
+.desc {
+    padding-bottom: 80px;
+    line-height: 1.5;
+    color: grey;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: rgb(239,239,239)
+}
+
+.card img {
+    width: 35%;
+    clip-path: circle();
+    position: absolute;
+    top: -70px;
+    left: 90px;
+}
+
+.tina .name {
+    background-color: rgb(236,144,141);
+    color: white;
+}
+
+.corrine .name {
+    background-color: rgb(95,106,190);
+    color: white;
+}
+
+.chris .name {
+    background-color: rgb(105,186,186);
+    color: white;
 }
