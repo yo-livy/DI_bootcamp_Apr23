@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 1vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+body > div
+{
+ width:20vw;
+ height:34vh;
+ background:#676470;
+ transition:all 0.3s ease;
+ margin: 2vh 2vw;
+ border-radius: 1rem;
+}
+
+.fade
+{
+ opacity:0.5;
+}
+.fade:hover
+{
+ opacity:1;
+}
+
+.color {
+    background-color: red;
+}
+
+.color:hover
+{
+ background:#53a7ea;
+}
+
+.shrink {
+    background-color: aqua;
+}
+
+.shrink:hover {
+    transform: scale(0.8);
+}
+
+.rotate {
+    background-color: yellow;
+}
+
+.rotate:hover {
+    transform: rotate(-30deg);
+}
+
+.circle {
+    background-color: purple;
+}
+
+.circle:hover {
+    border-radius: 50%;
+}
+
+.shadow {
+    background-color: orange;
+}
+
+.shadow:hover
+{
+ box-shadow:
+ 1px 1px #53a7ea,
+ 2px 2px #53a7ea,
+ 3px 3px #53a7ea;
+ transform: translateX(-3px);
+}
+
+.swing {
+    background-color: greenyellow;
+}
+
+@keyframes swing
+{
+    15%
+    {
+        transform: translateX(5px);
+    }
+    30%
+    {
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        transform: translateX(3px);
+    }
+    65%
+    {
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        transform: translateX(2px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+
+.swing:hover {
+    animation: swing 1s ease;
+    animation-iteration-count: 1;
+}
+
+.border {
+    background-color: black;
+}
+
+.border:hover
+{
+ box-shadow: inset 0 0 0 25px #53a7ea;
+}
+
+.grow {
+    width: 92vw;
+    height: 20vh;
+    background-color: violet;
+}
+
+.grow:hover {
+    transform: scale(1.3);
+}
