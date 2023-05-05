@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url("bg-pp_1.png");
+    background-image: linear-gradient(0deg,rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("bg-pp.png");
     background-attachment: fixed;
 }
 nav {
@@ -21,11 +21,17 @@ nav {
 
 .logo {
     display: flex;
-    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 15vw;
+    padding-left: 1rem;
 }
 
 .logo img {
-    padding-right: 1rem;
+    width: 4rem;
+    clip-path: circle();
+    background-position: center;
+    background-size: cover;
 }
 
 ul {
@@ -40,6 +46,13 @@ ul li {
 
 ul li a {
     text-decoration: none;
+    color: black;
+    font-weight: 700;
+    
+}
+
+ul li a:hover {
+    color: green
 }
 
 .section_1 {
@@ -73,6 +86,7 @@ ul li a {
     /* border: 3px solid red; */
     border-radius: 0.5rem;
     background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.8rem rgb(188, 215, 179);
 }
 
 .about > * {
@@ -125,6 +139,7 @@ ul li a {
     /* border: 3px solid red; */
     border-radius: 0.5rem;
     background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.8rem rgb(188, 215, 179);
 }
 
 .projects > * {
@@ -139,14 +154,58 @@ ul li a {
 }
 
 .item_2 {
-    background-color: black;
+    background: url("viktor_frankl.png");
+    background-size: cover;
     grid-column: span 3;
+    position: relative;
 }
 
-.item_3 {
-    background-color: blue;
-    grid-column: span 3;
+.a {
+    width: 100%;
+    height: 100%;
 }
+
+.item_2 .a:hover::before {
+    content: "A tribute page to Viktor Frankl";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+
+.item_3 {
+    background-image: url("reboot_mind.png");
+    background-size: cover;
+    grid-column: span 3;
+    position: relative;
+}
+
+.item_3 .a:hover::before {
+    content: "A page about great parks of Tel Aviv";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 
 .item_4 {
     background-color: yellow;
@@ -217,11 +276,16 @@ ul li a {
     border-radius: 0.5rem;
 }
 
-.button {
+.btn {
     font-size: 2rem;
     background-color: transparent;
     border: none;
     margin: 2rem auto;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: green;
 }
 
 .contact_title {
@@ -231,5 +295,20 @@ ul li a {
 }
 
 .icons {
+    margin: 0 auto;
+    margin-top: 5rem;
     display: flex;
+    justify-content: space-between;
+    width: 50vw;
+}
+
+.icons i {
+    font-size: 3rem;
+    padding: 1rem;
+    transition:all 0.3s ease;
+    color: rgb(68, 88, 68);
+}
+
+.icons i:hover {
+    transform: scale(1.1);
 }
