@@ -92,7 +92,7 @@ else:
 
 my_name = "Eugene"
 ask_name = input("Hi! What's your name: ")
-if ask_name == my_name:
+if ask_name.lower() == my_name.lower():
     print("Wow, we both have one name)")
 else:
     print("It's ok that we have different names)")
