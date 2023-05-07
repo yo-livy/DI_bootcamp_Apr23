@@ -106,7 +106,7 @@ else:
 # If they are not tall enough print a message that says they need to grow some more to ride.
 
 user_height = int(input("Hi! What's your height? : "))
-if user_height > 145:
+if user_height * 2.54 > 145:
     print("You are tall enough to ride.")
 else:
     print("You need to grow some more to ride.")
