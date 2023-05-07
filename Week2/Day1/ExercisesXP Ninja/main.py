@@ -52,7 +52,7 @@ sentence = ''
 max_sentence = ''
 i = 0
 while sentence.find("A") == -1:
-    sentence = input("Maybe you know more the longest sentence without A: ")
+    sentence = input("Maybe you know the longest sentence without A: ")
     if len(sentence) > len(max_sentence) and sentence.find("A") == -1:
         max_sentence = sentence
         print("Congrats, keep on doing")
