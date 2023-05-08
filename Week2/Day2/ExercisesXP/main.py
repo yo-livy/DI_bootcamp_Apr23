@@ -136,7 +136,7 @@ else:
 
 topping_list = []
 while True:
-    ask_toppings = input("Add toppings or quit: ")
+    ask_toppings = input("Add topping or quit: ")
     if ask_toppings == 'quit':
         break
     else:
