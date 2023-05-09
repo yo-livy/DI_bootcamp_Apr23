@@ -204,13 +204,8 @@ print(disney_users_B)
 
 # Use a method to recreate the 3rd result. Hint: The 3rd result is sorted alphabetically.
 
-# sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1]))
-
-disney_users_C = dict(sorted(disney_users_A.items(), key=lambda item: item[1]))
+disney_users_C = dict(sorted(disney_users_A.items()))
 print(disney_users_C)
-
-# To sort the dictionary by value, we pass the disney_users_A.items() method as the first argument to the sorted() function. This returns a list of key-value pairs as tuples, which we then sort using a lambda function as the key parameter. The lambda function takes each tuple as input and returns the second element (i.e., the value) for sorting. Finally, we convert the sorted list of tuples back to a dictionary using the dict() constructor.
-# In a lambda function, the argument before the colon : represents the input to the function, and the expression after the colon represents the output. In the case of the lambda function used to sort a dictionary by value, item: item[1] means that the input to the lambda function is a tuple representing a key-value pair from the dictionary, and the output is the second element of the tuple, which is the value.
 
 # Only recreate the 1st result for:
 # The characters, which names contain the letter “i”.
