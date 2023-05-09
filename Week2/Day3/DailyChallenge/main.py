@@ -14,14 +14,14 @@
 #
 # "grapes" ➞ { "g": [0], "r": [1], "a": [2], "p": [3]}
 
-# ask_word = input("Please, enter some word: ")
-# my_dict = {}
-# for position, letter in enumerate(ask_word):
-#     if letter not in my_dict:
-#         my_dict[letter] = [position]
-#     else:
-#         my_dict[letter].append(position)
-# print(my_dict)
+ask_word = input("Please, enter some word: ")
+my_dict = {}
+for position, letter in enumerate(ask_word):
+    if letter not in my_dict:
+        my_dict[letter] = [position]
+    else:
+        my_dict[letter].append(position)
+print(my_dict)
 
 
 # Challenge 2
