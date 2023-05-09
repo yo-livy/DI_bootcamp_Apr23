@@ -216,21 +216,17 @@ print(disney_users_C)
 # The characters, which names contain the letter “i”.
 
 disney_users_A1 = {}
-j = 0
-for i in users:
+for i,j in disney_users_A.items():
     if "i" in i:
         disney_users_A1[i] = j
-        j += 1
 print(disney_users_A1)
 
 # The characters, which names start with the letter “m” or “p”.
 
 disney_users_A2 = {}
-j = 0
-for i in users:
+for i, j in disney_users_A.items():
     if "m" == i[0].lower() or "p" == i[0].lower():
         disney_users_A2[i] = j
-        j += 1
 print(disney_users_A2)
 
 
