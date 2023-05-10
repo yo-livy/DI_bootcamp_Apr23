@@ -53,6 +53,7 @@ lst_1 = []
 lst_2 = []
 lst_3 = []
 
+
 for i in lst:
     lst_1.append(i[0])
     lst_2.append(i[1])
