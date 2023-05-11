@@ -98,6 +98,7 @@ def checkTie(board):
     global gameRunning
     if " " not in board[0] and " " not in board[1] and " " not in board[2]:
         print("It's a tie!")
+        printBoard(board)
         gameRunning = False
 
 #Player switcher func
