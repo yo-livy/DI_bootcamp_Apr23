@@ -109,7 +109,7 @@ def switchPlayer():
         currentPlayer = "X"
 
 
-# main function (gather all functions)
+# main (gather all functions)
 print("Weclome to TIC TAC TOE!")
 while gameRunning:
    printBoard(board)
