@@ -96,7 +96,7 @@ def checkWin():
 #Tie checker func
 def checkTie(board):
     global gameRunning
-    if "*" not in board[0] and " " not in board[1] and " " not in board[2]:
+    if " " not in board[0] and " " not in board[1] and " " not in board[2]:
         print("It's a tie!")
         gameRunning = False
 
