@@ -111,7 +111,7 @@ def switchPlayer():
 
 
 # main (gather all functions)
-print("Weclome to TIC TAC TOE!")
+print("Welcome to TIC TAC TOE!")
 while gameRunning:
    printBoard(board)
    playerInput(board)
