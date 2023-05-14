@@ -57,7 +57,7 @@ class Farm:
 # Add another method to the Farm class called get_short_info. This method should return the following string: “McDonald’s farm has cows, goats and sheep.”. The method should call the get_animal_types function to get a list of the animals.
 
     def get_short_info(self):
-        print(f"McDonald’s farm has {self.get_animal_types()[0]}, {self.get_animal_types()[1]} and {self.get_animal_types()[2]}.")
+        return f"McDonald’s farm has {self.get_animal_types()[0]}, {self.get_animal_types()[1]} and {self.get_animal_types()[2]}."
 
 macdonald = Farm("McDonald")
 macdonald.add_animal('cow',5)
@@ -66,4 +66,4 @@ macdonald.add_animal('sheep')
 macdonald.add_animal('goat', 12)
 print(macdonald.get_info())
 print(macdonald.get_animal_types())
-macdonald.get_short_info()
+print(macdonald.get_short_info())
