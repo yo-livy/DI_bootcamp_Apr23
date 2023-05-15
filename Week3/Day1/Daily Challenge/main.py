@@ -53,6 +53,7 @@ class Farm:
             sorted_lst.append(key)
             sorted_lst.sort()
         return sorted_lst
+# return sorted(list(self.all_animals.keys()))
 
 # Add another method to the Farm class called get_short_info. This method should return the following string: “McDonald’s farm has cows, goats and sheep.”. The method should call the get_animal_types function to get a list of the animals.
 
