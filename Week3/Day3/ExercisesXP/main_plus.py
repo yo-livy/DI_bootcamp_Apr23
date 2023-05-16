@@ -19,7 +19,7 @@ def random_number():
     else:
         print("Out of range")
 
-random_number()
+# random_number()
 
 # Exercise 3: String Module
 #
@@ -60,6 +60,22 @@ date_func()
 def time_to_1():
     return  datetime.date(2024,1,1) - datetime.date.today()
 print(f"Time left till 1st of January 2024: {time_to_1()}")
+
+# Exercise 6 : Birthday And Minutes
+#
+# Instructions
+#
+# Create a function that accepts a birthdate as an argument (in the format of your choice), then displays a message stating how many minutes the user lived in his life.
+
+def how_many_minutes(birthday):
+    date_format = "%Y-%m-%d"
+    date_obj = datetime.datetime.strptime(birthday, date_format)
+    delta = datetime.datetime.today() - date_obj
+    return int(delta.total_seconds()/60)
+print(f"Minutes: {how_many_minutes('1985-7-3')}")
+
+
+
 
 
 
