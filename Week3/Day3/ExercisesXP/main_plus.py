@@ -125,7 +125,20 @@ def how_old(seconds):
         print(f"{key}: {value * earth} earth years")
 how_old(1000000000)
 
+# Exercise 9 : Faker Module
+#
+# Instructions
+#
+# Install the faker module, and take a look at the documentation and learn how to properly implement faker in your code.
+# Create an empty list called users. Tip: It should be a list of dictionaries.
+# Create a function that adds new dictionaries to the users list. Each user has the following keys: name, adress, langage_code. Use faker to populate them with fake data.
 
+import faker
+import translate
+users = []
+
+def add_dict_to_lst(dict):
+    users.append(dict)
 
 
 
