@@ -74,6 +74,25 @@ def how_many_minutes(birthday):
     return int(delta.total_seconds()/60)
 print(f"Minutes: {how_many_minutes('1985-7-3')}")
 
+# Exercise 7 : Upcoming Holiday
+#
+# Instructions
+#
+# Write a function that displays today’s date.
+# The function should also display the amount of time left from now until the next upcoming holiday and print which holiday that is. (Example: the next holiday is in 30 days and 12:03:45 hours).
+# Hint: Start by hardcoding the datetime and name of the upcoming holiday.
+import math
+def today_date():
+    holiday_date = "2023-5-26"
+    holiday_date_formated = datetime.datetime.strptime(holiday_date,"%Y-%m-%d")
+    today = datetime.datetime.today()
+    time_until_holidays = holiday_date_formated - today
+    days = time_until_holidays.days
+    hours, remainder = divmod(time_until_holidays.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    return(f"Today is {today.strftime('%Y-%m-%h')}. The next holiday is in {days} days {hours}:{minutes}:{seconds} hours")
+
+print(today_date())
 
 
 
