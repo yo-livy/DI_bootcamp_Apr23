@@ -59,7 +59,6 @@ class Currency:
                 return self.amount + other.amount
         else:
             return self.amount + int(other)
-
     def __iadd__(self, other):
         if isinstance(other, Currency):
             if self.currency != other.currency:
