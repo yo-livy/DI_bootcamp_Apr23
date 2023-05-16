@@ -2,8 +2,8 @@
 #
 # Instructions
 #
-# In a file named func.py create a function that adds 2 number, and prints the result
-# In a file named exercise_one.py import and the function
+# In a file named main_plus_func.py create a function that adds 2 number, and prints the result
+# In a file named main_plus_exercise_one.py import and the function
 # Hint: You can use the the following syntaxes:
 #
 # import module_name
@@ -20,6 +20,6 @@
 #
 # import module_name as mn
 
-from func import add
+from main_plus_func import add
 
 print(add(5, 3))
