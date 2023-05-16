@@ -133,12 +133,23 @@ how_old(1000000000)
 # Create an empty list called users. Tip: It should be a list of dictionaries.
 # Create a function that adds new dictionaries to the users list. Each user has the following keys: name, adress, langage_code. Use faker to populate them with fake data.
 
-import faker
-import translate
+from faker import Faker
+
+fake = Faker()
 users = []
 
-def add_dict_to_lst(dict):
-    users.append(dict)
+def create_user():
+    user = {
+        'name':fake.name(),
+        'address':fake.address(),
+        'language_code':fake.language_code()
+    }
+    return user
+for i in range(10):
+    users.append(create_user())
+for i in users:
+    print(i)
+
 
 
 
