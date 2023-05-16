@@ -50,6 +50,18 @@ def date_func():
 
 date_func()
 
+# Exercise 5 : Amount Of Time Left Until January 1st
+#
+# Instructions
+#
+# Create a function that displays the amount of time left from now until January 1st.
+# (Example: the 1st of January is in 10 days and 10:34:01hours).
+
+def time_to_1():
+    return  datetime.date(2024,1,1) - datetime.date.today()
+print(f"Time left till 1st of January 2024: {time_to_1()}")
+
+
 
 
 
