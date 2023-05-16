@@ -21,6 +21,40 @@ def random_number():
 
 random_number()
 
+# Exercise 3: String Module
+#
+# Instructions
+#
+# Generate random String of length 5
+# Note: String must be the combination of the UPPER case and lower case letters only. No numbers and a special symbol.
+# Hint: use the string module
+
+import string
+
+def string_length():
+    str = string.ascii_letters
+    return ''.join(random.choice(str) for i in range(5))
+print(string_length())
+
+
+# Exercise 4 : Current Date
+#
+# Instructions
+#
+# Create a function that displays the current date.
+# Hint : Use the datetime module.
+
+import datetime
+def date_func():
+    print(datetime.date.today())
+
+date_func()
+
+
+
+
+
+
 
 
 
