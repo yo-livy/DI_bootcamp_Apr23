@@ -59,10 +59,4 @@
 # Please set the p.totalPages and p.currentPage attributes to the appropriate number as there cannot be a page 0.
 # If a page is outside of the totalPages attribute, then the goToPage method should go to the closest page to the number provided (e.g. there are only 5 total pages, but p.goToPage(10) is given: the p.currentPage should be set to 5; if 0 or a negative number is given, p.currentPage should be set to 1).
 
-class Pagination:
-    def __init__(self, items = None, pageSize = 10):
-        self.items = items
-        self.pageSize = pageSize
-    def getVisibleItems(self):
-        return self.items[:self.pageSize + 1]
-    def nextPage(self):
+
