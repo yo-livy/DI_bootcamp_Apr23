@@ -21,7 +21,8 @@ text = "A good book would sometimes cost as much as a good house."
 class Text:
     def __init__(self, a):
         self.a = a
-        self.lst_text = self.a.split()
+        self.text_lower = self.a.lower()
+        self.lst_text = self.text_lower.split()
     def freq_word(self, word):
         if word not in self.lst_text:
             return None
@@ -39,9 +40,7 @@ class Text:
                print(element)
 
     def unique(self):
-        text_lower = self.a.lower()
-        lst_lower = text_lower.split()
-        counter = collections.Counter(lst_lower)
+        counter = collections.Counter(self.lst_text)
         unique_lst = []
         for key, value in counter.items():
             if value == 1:
