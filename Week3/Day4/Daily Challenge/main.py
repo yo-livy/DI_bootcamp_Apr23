@@ -39,18 +39,32 @@ class Text:
                print(element)
 
     def unique(self):
-        lower_str = self.a.lower()
-        lower_lst = lower_str.split()
-        set_lst = set(lower_lst)
-        unique_lst = list(set_lst)
+        text_lower = self.a.lower()
+        lst_lower = text_lower.split()
+        counter = collections.Counter(lst_lower)
+        unique_lst = []
+        for key, value in counter.items():
+            if value == 1:
+                unique_lst.append(key)
         print(unique_lst)
         return unique_lst
-
 
 
 text1 = Text(text)
 print(text1.freq_word('good'))
 text1.most_common()
 text1.unique()
+
+# Part II
+#
+# Then, we will analyze a text coming from an external text file. Download the_stranger.txt file.
+#
+# Implement a classmethod that returns a Text instance but with a text file:
+#
+#     >>> Text.from_file('the_stranger.txt')
+# Hint: You need to open and read the text from the text file.
+#
+#
+# Now, use the provided the_stranger.txt file and try using the class you created above.
 
 
