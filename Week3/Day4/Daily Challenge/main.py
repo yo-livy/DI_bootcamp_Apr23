@@ -77,4 +77,49 @@ text_from_file.most_common()
 freq = text_from_file.freq_word("world")
 print(freq)
 
+# Bonus:
+#
+# Create a class called TextModification that inherits from Text.
+#
+# Implement the following methods:
+# a method that returns the text without any punctuation.
+# a method that returns the text without any english stop-words (check out what this is !!).
+# a method that returns the text without any special characters.
+# Note: Feel free to implement/create any attribute, method or function needed to make this work, be creative :)
+import string
+
+class TextModification(Text):
+    def no_punct(self):
+        for c in self.a:
+            if c in string.punctuation:
+                self.a = self.a.replace(c, "")
+        return self.a
+
+    def no_special(self):
+        for c in self.a:
+            if c not in string.ascii_letters and c not in string.digits:
+                self.a = self.a.replace(c, "")
+        return self.a
+
+    def no_stop(self):
+        with open("stopwords.txt", "r") as file:
+            stops = file.read()
+            lst_stops = stops.split()
+            lst_clean = []
+            for word in self.lst_text:
+                if word not in lst_stops:
+                    lst_clean.append(word)
+        return ' '.join(lst_clean)
+
+
+
+text1 = TextModification("Hello!@#!@#!<>.,.,")
+no_punct = text1.no_punct()
+print(no_punct)
+no_special = text1.no_special()
+print(no_special)
+text2 = TextModification("My name is. And I his him her a the Globe World Go will")
+no_stop = text2.no_stop()
+print(no_stop)
+
 
