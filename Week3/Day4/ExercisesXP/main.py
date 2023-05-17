@@ -34,16 +34,26 @@ def get_words_from_file():
         words = [word.strip() for word in words]
         return words
 
-get_words_from_file()
-
 def get_random_sentence(length):
     sentence = []
     for i in random.sample(get_words_from_file(), length):
         sentence.append(i)
     new_sentence = ' '.join(sentence).lower().capitalize()
-    return f"{new_sentence}."
+    print(f"{new_sentence}.")
+    return new_sentence
 
-print(get_random_sentence(10))
+# print(get_random_sentence(10))
+
+def main():
+    print(f"This function take 10 random words from the list of words, created from the text file. And make sentence from them. All letters in lowercase. Except the first one - it's capitalized.")
+    length = int(input("How long you want the sentence to be? (2 - 20) : "))
+    if length not in range(2, 21):
+        raise ValueError("The length is out the range 2 - 20.")
+    else:
+        get_random_sentence(length)
+
+main()
+
 
 
 
