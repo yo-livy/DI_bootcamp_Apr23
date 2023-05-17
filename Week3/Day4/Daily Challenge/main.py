@@ -32,7 +32,6 @@ class Text:
     def most_common(self):
         counter = collections.Counter(self.lst_text)
         most_common = counter.most_common()
-        print(most_common)
         max_count = most_common[0][1]
         print("Most common element(s):")
         for element, count in most_common:
@@ -48,12 +47,6 @@ class Text:
         print(unique_lst)
         return unique_lst
 
-
-text1 = Text(text)
-print(text1.freq_word('good'))
-text1.most_common()
-text1.unique()
-
 # Part II
 #
 # Then, we will analyze a text coming from an external text file. Download the_stranger.txt file.
@@ -65,5 +58,23 @@ text1.unique()
 #
 #
 # Now, use the provided the_stranger.txt file and try using the class you created above.
+
+    @classmethod
+    def from_file(cls, filename):
+        with open(filename, "r") as file:
+            text = file.read()
+        return cls(text)
+
+
+
+text1 = Text(text)
+print(text1.freq_word('good'))
+text1.most_common()
+text1.unique()
+
+text_from_file = Text.from_file("the_stranger.txt")
+text_from_file.most_common()
+freq = text_from_file.freq_word("world")
+print(freq)
 
 
