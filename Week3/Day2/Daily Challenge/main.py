@@ -1,3 +1,8 @@
+
+
+#Hello, Juliana! Sorry for late submitting. It should be submitted on 15.05.(Week 3 Day 2). Not finished yet. Will update it to the end of the week.
+
+
 # Instructions :
 #
 # Create a class to handle paginated content in a website. A pagination is used to divide long lists of content in a series of pages.
