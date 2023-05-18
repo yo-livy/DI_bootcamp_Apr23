@@ -16,12 +16,13 @@
 # a method that returns the most common word in the text.
 # a method that returns a list of all the unique words in the text.
 import collections
+import json
 
 text = "A good book would sometimes cost as much as a good house."
 class Text:
     def __init__(self, a):
         self.a = a
-        self.text_lower = self.a.lower()
+        self.text_lower = self.a.replace(".","").lower()
         self.lst_text = self.text_lower.split()
     def freq_word(self, word):
         if word not in self.lst_text:
@@ -121,5 +122,4 @@ print(no_special)
 text2 = TextModification("My name is. And I his him her a the Globe World Go will")
 no_stop = text2.no_stop()
 print(no_stop)
-
 

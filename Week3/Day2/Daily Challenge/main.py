@@ -1,8 +1,3 @@
-
-
-#Hello, Juliana! Sorry for late submitting. It should be submitted on 15.05.(Week 3 Day 2). Not finished yet. Will update it to the end of the week.
-
-
 # Instructions :
 #
 # Create a class to handle paginated content in a website. A pagination is used to divide long lists of content in a series of pages.
@@ -60,3 +55,38 @@
 # If a page is outside of the totalPages attribute, then the goToPage method should go to the closest page to the number provided (e.g. there are only 5 total pages, but p.goToPage(10) is given: the p.currentPage should be set to 5; if 0 or a negative number is given, p.currentPage should be set to 1).
 
 
+class Pagination:
+    def __init__(self, items=None, pageSize=10):
+        self.items = items or []
+        self.pageSize = int(pageSize)
+        self.currentPage = 1
+        self.totalPages = -(-len(self.items) // self.pageSize) #a trick to get the total amount of pages with not the full last one. The minus make floor (nearest lower int) as a ceiling for additional page
+
+    def getVisibleItems(self):
+        start_index = (self.currentPage - 1) * self.pageSize
+        end_index = start_index + self.pageSize
+        return self.items[start_index:end_index]
+
+    def prevPage(self):
+        self.currentPage = max(1, self.currentPage - 1)
+        return self
+        # Return self to allow method chaining
+
+    def nextPage(self):
+        self.currentPage = min(self.totalPages, self.currentPage + 1)
+        return self
+
+    def firstPage(self):
+        self.currentPage = 1
+        return self
+
+    def lastPage(self):
+        self.currentPage = self.totalPages
+        return self
+
+    def goToPage(self, pageNum):
+        self.currentPage = max(1, min(self.totalPages, int(pageNum)))
+        return self
+
+pages = Pagination(["A","a","a","a","a","a","a","a","a","a","a","a","b","c","d","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","w", "r", "g"])
+print(pages.goToPage(1.6))
