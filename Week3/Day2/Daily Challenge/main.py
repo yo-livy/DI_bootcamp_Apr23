@@ -88,5 +88,14 @@ class Pagination:
         self.currentPage = max(1, min(self.totalPages, int(pageNum)))
         return self
 
-pages = Pagination(["A","a","a","a","a","a","a","a","a","a","a","a","b","c","d","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","w", "r", "g"])
-print(pages.goToPage(1.6))
+
+alphabetList = list("abcdefghijklmnopqrstuvwxyz")
+pages = Pagination(alphabetList, 5)
+pages.nextPage()
+print(pages.getVisibleItems())
+pages.lastPage()
+print(pages.getVisibleItems())
+pages.firstPage()
+print(pages.getVisibleItems())
+
+
