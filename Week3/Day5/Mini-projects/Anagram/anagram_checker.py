@@ -1,11 +1,11 @@
 class AnagramChecker:
     def __init__(self, word_list_file):
         with open(word_list_file, 'r') as file:
-            word_list = file.read().splitlines()
+            word_list = file.read().lower().splitlines()
         self.word_list = word_list
 
     def is_valid_word(self, word):
-        return word.strip().lower()
+        return word.lower() in self.word_list
 
     @staticmethod
     def is_anagram(word1, word2):
@@ -20,3 +20,4 @@ class AnagramChecker:
             if self.is_anagram(word, i) and word.lower() != i.lower():
                 anagrams.append(i)
         return anagrams
+
