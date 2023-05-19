@@ -54,6 +54,42 @@ def main():
 
 main()
 
+# Exercise 2: Working With JSON
+#
+# Instructions
+#
+import json
+sampleJson = """{ 
+   "company":{ 
+      "employee":{ 
+         "name":"emma",
+         "payable":{ 
+            "salary":7000,
+            "bonus":800
+         }
+      }
+   }
+}"""
+#
+#
+# Access the nested “salary” key from the JSON-string above.
+# Add a key called “birth_date” to the JSON-string at the same level as the “name” key.
+# Save the dictionary as JSON to a file.
+
+data = json.loads(sampleJson)
+salary = data["company"]["employee"]["payable"]["salary"]
+print(salary)
+
+data["company"]["employee"]["birth-date"] = "19-08-1990"
+
+with open("data.json", "w") as file:
+    json.dump(data, file)
+
+
+
+
+
+
 
 
 
