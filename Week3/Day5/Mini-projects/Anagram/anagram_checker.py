@@ -5,7 +5,7 @@ class AnagramChecker:
         self.word_list = word_list
 
     def is_valid_word(self, word):
-        return word.lower() in self.word_list
+        return word.strip().lower()
 
     @staticmethod
     def is_anagram(word1, word2):

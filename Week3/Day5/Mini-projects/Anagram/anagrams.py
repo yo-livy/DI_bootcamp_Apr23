@@ -14,7 +14,8 @@ def main():
 
 def check_word():
     word = input("Please, input a single word: ")
-    word = word.strip().lower()
+    anagrams = AnagramChecker("sowpods.txt")
+    anagrams.is_valid_word(word)
     try:
         if " " in word:
             raise ValueError("It's not a single word.")
@@ -25,7 +26,6 @@ def check_word():
         print(error)
     except TypeError as error1:
         print(error1)
-    anagrams = AnagramChecker("sowpods.txt")
     lst_of_anagrams = anagrams.get_anagrams(word)
     lst_of_anagrams_str = ', '.join(lst_of_anagrams).lower()
     print(f"YOUR WORD :'{word.title()}'\nThis is a valid English word.\nAnagrams for your word: {lst_of_anagrams_str}.")
