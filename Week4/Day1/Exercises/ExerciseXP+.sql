@@ -52,8 +52,10 @@
 -- SELECT first_name, last_name FROM students
 -- WHERE id = 3 OR id = 5
 
--- SELECT * FROM students
--- WHERE birth_date >= '2000-01-01'
+SELECT id, first_name, last_name,TO_CHAR (birth_date, 'DD/MM/YYYY') AS birth_date FROM students
+WHERE birth_date >= '1/01/2000'
+
+
 
 
 
