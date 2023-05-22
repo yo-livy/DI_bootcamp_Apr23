@@ -31,5 +31,7 @@ def check_word():
     print(f"YOUR WORD :'{word.title()}'")
     if anagrams.is_valid_word(word):
         print(f"This is a valid English word.\nAnagrams for your word: {lst_of_anagrams_str}.")
+    else:
+        print("This is an invalid English word.")
 
 main()
