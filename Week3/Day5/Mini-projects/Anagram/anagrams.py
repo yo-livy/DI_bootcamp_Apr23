@@ -1,15 +1,17 @@
 from anagram_checker import AnagramChecker
 
 def main():
-    while True:
-        choice = input("Please, input a (w)ord or (e)xit: ").lower()
-        if choice == "e":
-            print("Bye, bye!")
-            break
-        elif choice == "w":
+    choice = input("Please, input a (w)ord or (e)xit: ").lower()
+    while choice != 'e':
+        # choice = input("Please, input a (w)ord or (e)xit: ").lower()
+        # if choice == "e":
+        #     print("Bye, bye!")
+        #     break
+        if choice == "w":
             check_word()
-            break
-        else:
+            choice = input("Please, input a (w)ord or (e)xit: ").lower()
+            # continue
+        elif choice != "w":
             print("The input is incorrect.")
 
 def check_word():
