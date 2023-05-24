@@ -17,6 +17,7 @@ def show_user_menu():
         if choice not in 'vadusq':
             print("Incorrect data\n")
         if choice == 'q':
+            show_restaurant_menu()
             print('Bye, bye!')
             break
 
