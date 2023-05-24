@@ -27,10 +27,13 @@ class MenuItem:
         mc.cursor.execute(update_item)
         mc.connection.commit()
 
-# item1 = MenuItem('pizza', 10)
-# item1.save()
-# item1.update('tacos', 100)
-item_pizza = MenuItem('pizza', 25)
-item_pizza.save()
+# item_pizza = MenuItem('pizza', 30)
+# item_tacos = MenuItem('tacos', 15)
+# item_sandwich = MenuItem('sandwich', 10)
+
+# item_pizza.save()
+# item_tacos.save()
+# item_sandwich.save()
+
 
 
