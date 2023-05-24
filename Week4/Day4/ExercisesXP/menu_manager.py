@@ -16,10 +16,16 @@ class MenuManager:
     @classmethod
     def all_items(cls):
         query = f"""
-        SELECT * FROM menu_items
+        SELECT item_name FROM menu_items
         """
+        mc.cursor.execute(query)
+        result = mc.cursor.fetchall()
+        return result
 
 
 item2 = MenuManager.get_by_name('pizza')
 print(item2)
+item3 = MenuManager.all_items()
+for i in item3:
+    print(i[0])
 

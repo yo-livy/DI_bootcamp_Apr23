@@ -15,7 +15,7 @@ class MenuItem:
     def delete(self):
         delete_item = f"""
         DELETE FROM menu_items
-        WHERE item_name = '{self.name}'
+        WHERE item_name = '{self.name}2'
         """
         mc.cursor.execute(delete_item)
         mc.connection.commit()
