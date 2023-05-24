@@ -4,6 +4,8 @@ class MenuItem:
     def __init__(self, name, price):
         self.name = name
         self.price = price
+    def __str__(self):
+        return (f"Nice {self.name} for reasonable {self.price} NIS")
     def save(self):
         save_item = f"""
         INSERT INTO menu_items 
@@ -15,7 +17,7 @@ class MenuItem:
     def delete(self):
         delete_item = f"""
         DELETE FROM menu_items
-        WHERE item_name = '{self.name}2'
+        WHERE item_name = '{self.name}'
         """
         mc.cursor.execute(delete_item)
         mc.connection.commit()
