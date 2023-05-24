@@ -11,7 +11,7 @@ def get_data_from_api(api_url):
         print("Error occurred while retrieving data from the API.")
         return None
 data = get_data_from_api('https://restcountries.com/v3.1/all')
-# pprint.pprint(data[4])
+# pprint.pprint(data[0])
 # pprint.pprint(data[0]['name']['common'])
 # pprint.pprint(data[0]['capital'][0])
 # pprint.pprint(data[0]['flag'])
