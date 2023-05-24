@@ -13,8 +13,12 @@ class MenuManager:
         else:
             return None
 
-    # def all_items(self):
-    #     pass
+    @classmethod
+    def all_items(cls):
+        query = f"""
+        SELECT * FROM menu_items
+        """
+
 
 item2 = MenuManager.get_by_name('pizza')
 print(item2)
