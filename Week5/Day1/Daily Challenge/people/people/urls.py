@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import path
-from people_app.views import people
+from people_app.views import people, people_id
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('people/', people)
+    path('people/', people),
+    path('people/<id>', people_id)
 ]

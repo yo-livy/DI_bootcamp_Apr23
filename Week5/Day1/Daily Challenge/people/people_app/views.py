@@ -36,3 +36,10 @@ def people(request):
         'sorted_people' : sorted_people
     }
     return render(request,'people.html', context)
+
+
+def people_id(request, id):
+  for i in people_lst:
+        if i['id'] == int(id):
+            context = i
+  return render(request, 'person.html', context)
