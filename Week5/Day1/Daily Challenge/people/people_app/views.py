@@ -38,8 +38,17 @@ def people(request):
     return render(request,'people.html', context)
 
 
-def people_id(request, id):
-  for i in people_lst:
-        if i['id'] == int(id):
-            context = i
-  return render(request, 'person.html', context)
+# def people_id(request, id: int):
+#   for i in people_lst:
+#         if i['id'] == id:
+#             context = i
+#   return render(request, 'person.html', context)
+
+def person_id(request, id: int):
+    person = None 
+    for p in people_lst:
+        if p['id'] == id:
+            person = p
+            break
+    context = {'person_instance': person}
+    return render(request, 'person.html', context)
