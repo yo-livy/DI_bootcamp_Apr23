@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hi! It's Animals Page</h1>
-    {% for i in data %}
-            {{i}}
+    <h1>It's Animals page</h1>
+    {% for animal in animals_all %}
+        <p><a href="{% url 'animal' animal.id%}">{{animal.name}}</p>
     {% endfor %}
 </body>
 </html>

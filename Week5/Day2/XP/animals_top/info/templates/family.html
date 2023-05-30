@@ -7,7 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hi!, It's family page</h1>
-    {{data}}
+    <h1>It's Family page</h1>
+    {{family.name}}
+    {% for animal in animals %}
+        <li> {{ animal.name }} </li>
+        {% endfor %}
 </body>
 </html>
