@@ -1,4 +1,5 @@
 
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -9,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-19y1jq1%+!!d-9od5l5w6pj8@xfb6o3_w##jlou$4vorgs*pds'
+SECRET_KEY = 'django-insecure--0vdfc0iejocmwn7j+6a$$$im)8y8-8ijgu=pum_ql0dwh%rs('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,7 +40,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'phonebook.urls'
+ROOT_URLCONF = 'phones.urls'
 
 TEMPLATES = [
     {
@@ -57,16 +58,21 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'phonebook.wsgi.application'
+WSGI_APPLICATION = 'phones.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'phone', 
+        'USER': 'postgres', # postgres
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
