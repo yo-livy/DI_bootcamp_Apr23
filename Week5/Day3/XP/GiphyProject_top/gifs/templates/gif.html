@@ -8,8 +8,9 @@
 </head>
 <body>
     <h1>It's GIF page</h1>
-    <!-- {% for i in gif %}
-        <img src="{{i}}">
-    {% endfor %} -->
+    {{gif.title}} <br>
+    {{gif.uploader_name}} <br>
+    {{gif.created_at}} <br>
+    <img src="{{gif.url}}">
 </body>
 </html>
