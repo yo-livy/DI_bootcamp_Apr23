@@ -12,7 +12,10 @@
     {% for todo in todo_list %}
         <ul>
             <li>{{todo}}</li>
-            <button type="submit" name="done">Done</button>
+            <form action="{% url 'todo_done' todo.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" name="done">Done</button>
+            </form>
         </ul>
     {% endfor %}
 
