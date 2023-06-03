@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Rental id {{rental_id}} </h1>
+           <a href="{% url 'customer' element_from_rentals_id.customer.id %}">{{element_from_rentals_id.customer}}</a> <br>
+           <a href="{% url 'vehicle_id' element_from_rentals_id.vehicle.id %}">{{element_from_rentals_id.vehicle}}</a> <br>
+           {% if element_from_rentals_id.return_date %}
+                <span>Returned on: {{element_from_rentals_id.return_date}}</span>
+           {% else %}
+                <span>Not yet returned</span>
+                <form action="{% url 'list_of_rentals_id' element_from_rentals_id.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="undone" class="btn btn-success">Return</button>
+                </form>
+           {% endif %}
+           
+</body>
+</html>
