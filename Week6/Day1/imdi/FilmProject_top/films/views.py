@@ -31,4 +31,8 @@ class DirectorCreateView(CreateView):
     success_url = reverse_lazy('homepage')
 
 
-
+class ReviewCreateView(CreateView):
+    model = Review
+    form_class = ReviewForm
+    template_name = 'review/addReview.html'
+    success_url = reverse_lazy('homepage')

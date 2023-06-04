@@ -11,4 +11,9 @@ class DirectorForm(forms.ModelForm):
         model = Director
         fields = '__all__'
 
+class ReviewForm(forms.ModelForm):
+    rating = forms.ChoiceField(choices=RatingChoices.choices, widget=forms.RadioSelect)
 
+    class Meta:
+        model = Review
+        fields = '__all__'

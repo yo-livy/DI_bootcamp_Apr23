@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% include 'navbar.html' %}
 
 {% block content %}
 
@@ -11,7 +10,12 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ film.title }}</h5>
                         <h5 class="card-title">{{ film.release_date }}</h5>
-
+                        <p class="card-title">Rating:
+                            {% for i in film.review.all %}
+                            {{i.rating}}
+                            {% if not forloop.last %}, {% endif %}
+                            {% endfor %}
+                        </p>
                         <p class="card-text">Director(s): 
                             {% for director in film.director.all %}
                             {{ director.first_name }} {{ director.last_name }}

@@ -31,5 +31,19 @@ class Director(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+    
+class RatingChoices(models.IntegerChoices):
+    ONE = 1, 'One'
+    TWO = 2, 'Two'
+    THREE = 3, 'Three'
+    FOUR = 4, 'Four'
+    FIVE = 5, 'Five'
+    
+class Review(models.Model):
+    film = models.ForeignKey('Film', on_delete=models.CASCADE, related_name='review')
+    review_text = models.TextField()
+    rating = models.IntegerField(choices=RatingChoices.choices)
+    review_date = models.DateTimeField(auto_now_add=True)
+
 
 
