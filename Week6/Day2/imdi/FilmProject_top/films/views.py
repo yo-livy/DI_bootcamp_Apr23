@@ -7,6 +7,7 @@ from .models import *
 from .forms import *
 from django.urls import reverse_lazy
 
+
 # Create your views here.
 # Create a class-based view, HomePageView, which inherits from generic.ListView. This view should be used for the URL route: /homepage, and render a template called homepage.html.
 

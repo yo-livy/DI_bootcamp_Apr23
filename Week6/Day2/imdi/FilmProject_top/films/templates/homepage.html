@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% if user.is_authenticated %}
 <h1>New Films</h1>
     <div class="row">
         {% for film in films %}
@@ -27,6 +27,9 @@
             </div>
         {% endfor %}
     </div>
+{% else %}
+<div class="alert alert-primary" role="alert">Please, login or register</div>
+{% endif %}
 
 
 {% endblock %}
