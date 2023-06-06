@@ -2,7 +2,7 @@ from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views.generic import ListView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from .models import *
 from .forms import *
 from django.urls import reverse_lazy
@@ -25,6 +25,13 @@ class FilmCreateView(CreateView):
     template_name = 'film/addFilm.html'
     success_url = reverse_lazy('homepage')
 
+class FilmDeleteView(DeleteView):
+    model = Film
+    template_name = 'film_confirm_delete.html'
+    success_url = reverse_lazy('homepage')
+    
+    
+
 class DirectorCreateView(CreateView):
     model = Director
     form_class = DirectorForm
@@ -37,3 +44,4 @@ class ReviewCreateView(CreateView):
     form_class = ReviewForm
     template_name = 'review/addReview.html'
     success_url = reverse_lazy('homepage')
+
