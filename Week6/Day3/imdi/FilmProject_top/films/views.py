@@ -1,14 +1,16 @@
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, DeleteView
+
 from .models import *
 from .forms import *
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib import messages
+
+
 
 
 
@@ -59,3 +61,8 @@ class ReviewCreateView(CreateView):
     success_url = reverse_lazy('homepage')
 
 
+
+class FilmDetailView(DetailView):
+    model = Film
+    template_name = 'film/film_detail.html'  # Specify the template for rendering film details
+    context_object_name = 'film'  # Set the variable name to use in the template for the film object
