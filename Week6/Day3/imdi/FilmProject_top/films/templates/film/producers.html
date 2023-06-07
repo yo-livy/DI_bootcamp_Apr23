@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    
+{% block content %}
+    <h1> Manage posts: </h1>
+
+    <form method="post">
+        {%csrf_token%}
+        {{ formset.management_form }}
+        {% for form in formset %}
+            <p>{{form}}</p>
+        {%endfor%}
+        <button type="submit"> submit </button>
+    </form>
+{% endblock %}
