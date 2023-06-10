@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>It's GIF page</h1>
+    {{gif.title}} <br>
+    {{gif.uploader_name}} <br>
+    {{gif.created_at}} <br>
+    <img src="{{gif.url}}">
+
+
+    <form action="{% url 'increment_likes' gif.id %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" style="background-color: rgb(59, 237, 59); padding: 10px; font-size: 20px; margin: 20px; border: none; border-radius: 1rem; cursor: pointer;">Like</button>
+    </form>
+   
+
+    <form action="{% url 'decrement_likes' gif.id %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" style="background-color: rgb(236, 102, 102); padding: 10px; font-size: 20px; margin: 20px; border: none; border-radius: 1rem; cursor: pointer;">Dislike</button>
+    </form>
+    
+
+</body>
+</html>
