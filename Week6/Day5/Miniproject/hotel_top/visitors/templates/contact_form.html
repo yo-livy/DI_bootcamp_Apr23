@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+    background-image: url('/static/360890137.jpg'); /* Replace 'image.jpg' with the actual filename and path of your image */
+    background-size: cover; /* Adjust the background-size property as needed */
+    background-attachment: fixed;
+  }
+  
+  .box_book {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form_book {
+    margin-top: 75px;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 3rem;
+    border: none;
+    padding: 30px 60px;
+  }
+  
+  .form_book > * {
+    padding: 10px;
+    font-size: 22px;
+  }
+  
+  .form_book input[type="text"], input[type='email'], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button {
+    background-color: rgb(22,58,144);
+    color: rgb(244, 241, 240);
+    border: none;
+    border-radius: 5rem;
+    font-size: 26px;
+    padding: 20px 35px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  </style>
+
+<h1>Contact us</h1>
+
+<div class="box_book">
+  <form method="post" class="form_book">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="button">Send</button>
+  </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+    
+{% block content %}
+
+<div class="top">
+    
+    {% for hotel in hotels %}
+        <h1>{{hotel.title}}</h1>
+        <p class="title">{{hotel.description}}</p>
+        <img class='hotel_img' src="{{hotel.image.url}}" alt="Hotel Image">
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

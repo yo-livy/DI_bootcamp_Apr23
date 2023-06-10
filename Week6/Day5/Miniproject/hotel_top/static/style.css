@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Vollkorn', serif;
+}
+
+.top {
+  background-color: rgb(85, 121, 176);
+}
+
+h1 {
+    color: rgb(244, 241, 240);
+    font-size: 64px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.title {
+    color: rgb(244, 241, 240);
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.hotel_img {
+    width: 100vw;
+    height: auto
+}
+
+h3 {
+  text-align: center;
+  color: rgb(48, 58, 19);
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(22,58,144);
+    padding: 10px;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(244, 241, 240);
+    font-size: 18px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: end;
+    height: 100vh;
+    width: 64vw;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .circle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 5rem;
+    margin: 20px;
+    padding: 10px;
+    font-size: 28px;
+    text-decoration: none;
+  }
+
+  

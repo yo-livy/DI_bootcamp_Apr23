@@ -1,0 +1,18 @@
+<div class="navbar">
+    <nav>
+      <ul>
+        <li><a href="{% url 'info' %}">Home</a></li>
+        <li><a href="{% url 'book-stay' %}">Booking</a></li>
+        <li><a href="{% url 'rooms-all' %}">All rooms</a></li>
+        <li><a href="#">Review</a></li>
+        <li><a href="{% url 'contact' %}">Contact us</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        <li style="text-transform: capitalize; color: rgb(244, 241, 240); font-size: 18px;">Hello, {{user}}!</li>
+        
+        {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>

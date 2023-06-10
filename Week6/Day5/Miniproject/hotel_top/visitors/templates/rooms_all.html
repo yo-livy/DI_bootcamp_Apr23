@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+    background-image: url('/static/466308418-2.jpg'); /* Replace 'image.jpg' with the actual filename and path of your image */
+    background-size: cover; /* Adjust the background-size property as needed */
+    background-attachment: fixed;
+  }
+  
+  </style>
+
+    <h1>All rooms</h1>
+
+<div class="box">   
+    {% for room in rooms_all %}
+    <span class="circle rooms"><a href="{% url 'rooms' room.id %}" class="circle">{{room.room_number}}</a></span>
+    {% endfor %}
+</div>
+
+{% endblock %}

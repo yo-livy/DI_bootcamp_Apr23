@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+    
+{% block content %}
+
+<style>
+
+body {
+  background-image: url('/static/360890297.jpg'); /* Replace 'image.jpg' with the actual filename and path of your image */
+  background-size: cover; /* Adjust the background-size property as needed */
+}
+
+.titlebox {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 4px;
+    background-color: rgba(85,142,60,0.5);
+    margin: 200px auto;
+    padding: 30px 60px;
+}
+
+
+
+</style>
+<div class="titlebox">
+    <h1> Your message was successfully send!<span style="font-size: 64px;">✉️</span></h1>
+</div>
+ 
+{% endblock %}

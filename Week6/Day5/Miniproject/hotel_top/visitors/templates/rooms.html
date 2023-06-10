@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+    background-image: url('/static/466308418-2.jpg'); /* Replace 'image.jpg' with the actual filename and path of your image */
+    background-size: cover; /* Adjust the background-size property as needed */
+    background-attachment: fixed;
+}
+.rooms {
+  background-color: aliceblue;
+}
+
+.rooms a {
+  color: rgb(48, 58, 19);
+}
+
+.available {
+  background-color: rgb(223, 245, 223);
+  color: rgb(48, 58, 19);
+  font-size: 16px;
+}
+
+.notavailable {
+  background-color: rgb(254, 95, 95);
+  color: whitesmoke;
+  font-size: 16px;
+}
+</style>
+
+    <h1>Room # {{room.room_number}}</h1><br>
+    <h3>For {{room.capacity}} person</h3><br>
+    <h3>Price: ${{room.price}} per night</h3><br>
+
+    <div class="box">
+    {% for i in available %}
+        {% if i.available %}
+            <span class="circle available">{{i.date}}</span>
+        {% else %}
+            <span class="circle notavailable">{{i.date}}</span>
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endblock %}
