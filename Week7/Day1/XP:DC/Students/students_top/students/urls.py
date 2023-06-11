@@ -6,5 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/students/', StudentView.as_view(), name='posts'),
-    path('api/students/<int:pk>/', StudentView.as_view(), name='post-detail')
+    path('api/students/<int:pk>/', StudentView.as_view(), name='post-detail'),
+    path('api/students/date/<str:date_joined>/', StudentView.as_view(), name='post_date')
 ]

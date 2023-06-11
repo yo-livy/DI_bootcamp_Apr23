@@ -13,8 +13,12 @@ class StudentView(APIView):
 
     def get(self, request, *args, **kwargs):
         if 'pk' in kwargs:
-            post = Student.objects.get(id=kwargs['pk'])
-            serializer = StudentSerializer(post)
+            student = Student.objects.get(id=kwargs['pk'])
+            serializer = StudentSerializer(student)
+            return Response(serializer.data)
+        elif 'date_joined' in kwargs:
+            students = Student.objects.filter(date_joined=kwargs['date_joined'])
+            serializer = StudentSerializer(students, many=True)
             return Response(serializer.data)
         else:
             queryset = Student.objects.all()
