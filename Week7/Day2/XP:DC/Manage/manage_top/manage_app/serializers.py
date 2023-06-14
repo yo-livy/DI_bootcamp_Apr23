@@ -1,26 +1,33 @@
+#mserializers.py
 from rest_framework import serializers
 from .models import *
 
 class DepartmentSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='department_detail')
 
     class Meta:
         model = Department
-        fields = ('name', 'description')
+        fields = '__all__'
 
 class EmployeeSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='employee_detail')
 
     class Meta:
         model = Employee
-        fields = ('name', 'email', 'phone_number', 'department')
+        fields = '__all__'
 
 class TaskSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='task_detail')
 
     class Meta:
         model = Task
-        fields = ('name', 'description', 'due_date', 'completed', 'project')
+        fields = '__all__'
 
 class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ('name', 'description', 'start_date', 'end_date')
+        fields = '__all__'
+
+
+
