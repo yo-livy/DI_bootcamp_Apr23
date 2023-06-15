@@ -8,6 +8,8 @@ admin.site.register(Film)
 admin.site.register(Director)
 admin.site.register(Review)
 admin.site.register(Poster)
+admin.site.register(Producer)
+
 
 
 

@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<h1>Are you sure you want to delete {{film.title}}</h1>
+
 <h1>Confirm to delete film</h1>
 <form method="post">
     {%csrf_token%} 

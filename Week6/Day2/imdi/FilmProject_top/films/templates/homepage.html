@@ -2,15 +2,23 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
 <h1>New Films</h1>
     <div class="row">
         {% for film in films %}
             <div class="col-md-4">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <img style="width: 100%; height: auto; margin-bottom: 10px;"  src="{{ film.poster.image.url }}" alt="{{ film.poster.explanation_img }}">
-                        <h5 class="card-title">{{ film.title }}</h5>
+                        <img style="width: 100%; height: auto; margin-bottom: 10px;"  src="{{ film.poster.image }}" alt="{{ film.poster.explanation_img }}">
+                        <h5 class="card-title"><a href="{% url 'detail' film.id %}">{{ film.title }}</a></h5>
                         <h5 class="card-title">{{ film.release_date }}</h5>
+                        <a href="{% url 'delete-film' film.id %}">Delete</a>
                         <p class="card-title">Rating:
                             {% for i in film.review.all %}
                             {{i.rating}}
