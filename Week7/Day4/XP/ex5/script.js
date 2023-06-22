@@ -59,3 +59,11 @@ for (let i of liElements) {
 //----------
 
 document.body.style.fontSize = '50px';
+
+//-----------
+
+const firstName = document.getElementsByTagName('li')[0].textContent;
+const secondName = document.getElementsByTagName('li')[1].textContent;
+if (divNode1.style.backgroundColor === 'lightblue') {
+    alert(`Hello ${firstName} and ${secondName}!`)
+}
