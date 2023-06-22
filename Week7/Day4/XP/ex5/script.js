@@ -1,7 +1,3 @@
-//Hi, Daniel! Here's week7 day 4 xp exercises (1 - 5 (5th without 'bonus' yet)). 
-// The rest part of assignment (xp: 5th bonus, 6, 7 and Daily Challenge) I will upload a little bit later.
-
-
 const divNode = document.getElementsByTagName('div')
 console.log(divNode[0].innerHTML)
 
