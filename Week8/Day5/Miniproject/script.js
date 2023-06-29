@@ -69,35 +69,48 @@ const robots = [
       email: 'Rey.Padberg@karina.biz',
       image:'https://robohash.org/10?200x200'
     }
-    ];
+];
 
-    robots.forEach((element) => {
-        const divCard = document.createElement('div');
-        const sectionNode = document.getElementById('section');
-        sectionNode.appendChild(divCard);
-        
-        const divProfileContainer = document.createElement('div');
-        divCard.appendChild(divProfileContainer);
-        
-        const imgProfile = document.createElement('img');
-        divProfileContainer.appendChild(imgProfile);
+const sectionNode = document.getElementById('section');
 
-        divCard.setAttribute('class', 'card')
-        divProfileContainer.setAttribute('class', 'profile-container');
-        imgProfile.setAttribute('class', 'image-profile');
-        imgProfile.setAttribute('src', element['image']);
-        
-        const nameTextNode = document.createTextNode(element['name']);
-        const nameNode = document.createElement('p');
-        nameNode.appendChild(nameTextNode);
-        divCard.appendChild(nameNode);
-        nameNode.setAttribute('class', 'name');
+const viewRobots = (arr) => {
+  arr.forEach((element) => {
+    const divCard = document.createElement('div');
+    sectionNode.appendChild(divCard);
+    const divProfileContainer = document.createElement('div');
+    divCard.appendChild(divProfileContainer);
+          
+    const imgProfile = document.createElement('img');
+    divProfileContainer.appendChild(imgProfile);
 
-        const mailTextNode = document.createTextNode(element['email']);
-        const mailNode = document.createElement('p');
-        mailNode.appendChild(mailTextNode);
-        divCard.appendChild(mailNode);
-        mailNode.setAttribute('class', 'mail');
-    })
+    divCard.setAttribute('class', 'card')
+    divProfileContainer.setAttribute('class', 'profile-container');
+    imgProfile.setAttribute('class', 'image-profile');
+    imgProfile.setAttribute('src', element['image']);
+          
+    const nameTextNode = document.createTextNode(element['name']);
+    const nameNode = document.createElement('p');
+    nameNode.appendChild(nameTextNode);
+    divCard.appendChild(nameNode);
+    nameNode.setAttribute('class', 'name');
 
-    
+    const mailTextNode = document.createTextNode(element['email']);
+    const mailNode = document.createElement('p');
+    mailNode.appendChild(mailTextNode);
+    divCard.appendChild(mailNode);
+    mailNode.setAttribute('class', 'mail');
+  })
+}
+
+viewRobots(robots);
+
+const input = document.getElementById('search');
+
+input.addEventListener('input', () => {
+  const inputValue = input.value.toLowerCase().trim();
+  const filteredRobots = robots.filter((element) => element.name.toLowerCase().includes(inputValue));
+
+  sectionNode.innerHTML = '';
+
+  viewRobots(filteredRobots);
+});
