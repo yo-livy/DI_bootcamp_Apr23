@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(98,86,198);
+    background-image: url('circuit-pattern.png');
+    background-attachment: fixed;
+}
+
+#section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    margin: 0 100px;
+
+}
+
+nav {
+    background-color: rgb(137,220,139);
+    height: 75px;
+    width: 100vw;
+    display: inline-flex;
+    align-items: center;
+    position: fixed;
+}
+
+.logo {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: 'Monoton', cursive;
+    font-size: 35px;
+}
+
+.search-container {
+    width: 100vw;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(137, 220, 139);
+    background-image: url('card-pattern.png');
+}
+
+#search {
+    width: 50vw;
+    height: 30px;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
+    font-family: 'Martian Mono', monospace;
+
+}
+
+.profile-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(50,57,80);
+}
+
+.image-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(111, 190, 195);
+    background-image: url('card-pattern.png');
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 250px;
+    height: 300px;
+    margin: 25px;
+    font-family: 'Martian Mono', monospace;
+}
+
+.name {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 2;
+    align-self: flex-start ;
+}
+
+.mail {
+    font-size: 10px;
+    font-weight: 100;
+    line-height: 2;
+    align-self: flex-start;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
