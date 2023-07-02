@@ -9,4 +9,4 @@ const anagram = (a, b) => {
         return false;
     }
 }
-console.log(anagram('hello', 'ehllo'));
+console.log(anagram('he llo', 'ehllo'));

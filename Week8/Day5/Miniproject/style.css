@@ -109,3 +109,9 @@ a {
     text-decoration: none;
     color: black;
 }
+
+.alert {
+    text-align: center;
+    font-family: 'Martian Mono', monospace;
+    font-size: 22px;
+}
