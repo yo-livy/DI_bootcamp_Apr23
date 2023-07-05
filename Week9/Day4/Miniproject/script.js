@@ -7,6 +7,7 @@ const errorMsg = document.getElementById('error');
 const fetchData = async () => {
     console.log('start')
     output.innerHTML = '';
+    errorMsg.style.display = 'none';
     loading.style.display = 'block';
     const random = Math.floor(Math.random() * 83) + 1;
     try {

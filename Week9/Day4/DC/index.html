@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <title>Currency converter</title>
+</head>
+<body>
+    <div id="table">
+       <h1>Currency converter</h1>
+
+       <label for="fCurrency">From:</label>
+       <select id="fCurrency" class="fields"></select>
+
+       <label for="sCurrency">To:</label>
+       <select id="sCurrency" class="fields"></select>
+
+       <label for="amount">Amount</label>
+       <input type="number" name="amount" id="amount" min="1" required class="fields">
+
+       <button id="convertBtn" onclick="convert(event)">Convert</button>
+
+       <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
