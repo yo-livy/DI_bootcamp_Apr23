@@ -21,7 +21,7 @@ h1 {
 label {
     color: white;
     font-size: 24px;
-    margin: 10px;
+    margin-left: 15px;
 }
 
 #table {
@@ -29,7 +29,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vw;
+    width: 55vw;
     height: fit-content;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
