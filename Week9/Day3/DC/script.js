@@ -37,7 +37,7 @@ myForm.addEventListener('submit', search);
 
 const delAllBtn = document.getElementById('deleteAll');
 delAllBtn.addEventListener('click', () => {
-    const allContainers = document.querySelectorAll('#container');
+    const allContainers = document.querySelectorAll('#container'); //we get an array of containers with id=container
     allContainers.forEach((element) => {
         element.remove();
     })

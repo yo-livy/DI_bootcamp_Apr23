@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    background-image: url("https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+div {
+    text-align: center;
+    font-weight: 200;
+}
+
+#imglogo {
+    width: 40vw;
+    height: auto;
+}
+
+#border {
+    border: 1px solid rgb(251,233,84);
+    border-radius: 22px;
+    width: 50vw;
+    height: 35vh;
+    text-align: center;
+    margin: 30px;
+}
+
+#border > * {
+    margin-top: 30px;
+    color: whitesmoke;
+    font-weight: 400;
+}
+
+#loading {
+    margin-top: 130px;
+}
+
+#output > * {
+    margin-top: 30px;
+    color: whitesmoke;
+    font-weight: 400;
+}
+
+
+#button {
+    text-align: center;
+    font-weight: 400;
+    padding: 20px;
+    border-radius: 22px;
+    font-size: 1.5rem;
+    background-color: rgb(251,233,84);
+    border: none;
+    cursor: pointer;
+    width: 20vw;
+    margin: 30px;
+}
