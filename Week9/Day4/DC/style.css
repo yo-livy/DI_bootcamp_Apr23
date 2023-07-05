@@ -2,27 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 body {
     background-image: url('wp2300383.jpg');
+    display: flex;
+    justify-content: center;
 
 }
 
 h1 {
     color: white;
     margin: 20px;
-    font-size: 36px;
+    font-size: 42px;
 }
 
 label {
     color: white;
     font-size: 24px;
-    margin: 20px;
+    margin: 10px;
 }
 
 #table {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,23 +34,26 @@ label {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 22px;
-    padding: 15px;
+    padding: 10px;
 }
 
 button {
     padding: 25px;
     border: none;
-    background-color:rgb(63,132,247);
-    margin: 50px;
+    background-color:rgb(80,170,109);
+    margin: 30px;
     color: white;
-    font-size: 18px;
-    border-radius: 22px;
+    font-size: 24px;
+    font-weight: 400;
+    border-radius: 100%;
     cursor: pointer;
+    width: 150px;
+    height: 150px;
 }
 
 .fields {
     padding: 15px;
-    margin: 15px;
+    margin: 30px;
     border: none;
     border-radius: 22px;
     font-size: 18px;
@@ -56,3 +62,26 @@ button {
 
 }
 
+#output {
+    font-size: 44px;
+    font-weight: 400;
+    color: white;
+    border: 1px solid white;
+    height: 100px;
+    margin-bottom: 50px;
+    width: 300px;
+}
+
+#reconvert {
+    left: 500px;
+    top: 165px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
