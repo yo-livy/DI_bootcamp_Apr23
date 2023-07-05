@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <title>Miniproject Quotes</title>
+</head>
+<body>
+    <section id="quoteSection"></section>
+    <section id="section1">
+        <button onclick="countWithSpaces()">Number of chars with spaces</button>
+        <button onclick="countWithoutSpaces()">Number of chars without spaces</button>
+        <button onclick="wordsNumber()">Number of words</button>
+        <button onclick="likeQuote()">Like</button>
+        <button id="generateBtn">Generate</button>
+    </section>
+    
+    <section id="section2">
+        <form id="myForm" onsubmit="addQuote(event)">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+            <label for="quote">Quote</label>
+            <input type="text" name="quote" id="quote">
+            <button>Add</button>
+        </form>
+    </section>
+
+    
+    <section id="section3">
+        <form id="quoteForm">
+            <label for="authorInput">Author</label>
+            <input type="text" id="authorInput" />
+            <button type="submit">Filter</button>
+        </form>
+        
+        <div id="quoteContainer">
+            <p id="quoteText"></p>
+            <p id="quoteAuthor"></p>
+        </div>
+        
+        <div id="navigationButtons">
+            <button id="previousButton">Previous</button>
+            <button id="nextButton">Next</button>
+        </div>
+    </section>  
+    <script src="script.js"></script>
+</body>
+</html>
