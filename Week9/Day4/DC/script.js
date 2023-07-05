@@ -23,7 +23,7 @@ const getCurrency = async () => {
             const response = await fetch(`https://v6.exchangerate-api.com/v6/1ef3bcf79e4cf51580d699fa/pair/${fCurrency.value}/${sCurrency.value}/${amount.value}`);
             if (response.ok) {
                 const resultData = await response.json();
-                const result = resultData.conversion_result;
+                const result = Math.ceil(resultData.conversion_result * 100) / 100;
                 const pNode = document.createElement('p');
                 pNode.textContent = result;
                 output.appendChild(pNode);
