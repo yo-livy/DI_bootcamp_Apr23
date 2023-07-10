@@ -1,0 +1,18 @@
+h2 {
+    border: 1px dashed blue;
+    color: red;
+    text-align: center;
+}
+
+h4 {
+    display: inline-block;
+}
+
+button {
+    padding: 5px;
+    color: blue;
+}
+
+#text {
+    text-align: center;
+}
