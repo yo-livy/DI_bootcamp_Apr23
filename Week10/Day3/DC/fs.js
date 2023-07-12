@@ -5,13 +5,15 @@ fs.readFile('RightLeft.txt','utf-8', (err, data) => {
     let position = 0;
     const arrRL = data.split('');
     console.log(arrRL);
-    arrRL.forEach((element) => {
-        if(element==='>'){
+    for(element of arrRL) {
+        if(element === '>'){
             position++;
-        }else{
+        } else if (element==='<') {
             position--;
+        } else {
+            continue;
         }
-    })
+    }
     if (position > 0){
         console.log(`${position} steps to the right`)
     }else {
@@ -32,7 +34,7 @@ fs.readFile('RightLeft.txt','utf-8', (err, data) => {
     for(let i = 0; i < data.length; i++){
         if(data[i] === '>'){
             position++;
-        }else if(data[i] === '<'){
+        } else if(data[i] === '<') {
             position--;
         }
         totalSteps++;
