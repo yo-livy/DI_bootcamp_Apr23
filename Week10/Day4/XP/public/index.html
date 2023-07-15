@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section id="main">
+
+        <div id="login">
+            <h1>Login</h1>
+            <label for="username">Username:</label>
+            <input type="text" id="username" onkeyup="checkLoginInput()">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" onkeyup="checkLoginInput()">
+
+            <button id="loginButton" disabled="true" onclick="login()">Login</button>
+            <p id="login-message"></p>
+        </div>
+
+
+        <div id="register">
+            <h1>Register</h1>
+            <label for="fName">First name:</label>
+            <input type="text" id="fName" onkeyup="checkRegInput()">
+
+            <label for="lName">Last name:</label>
+            <input type="text" id="lName" onkeyup="checkRegInput()">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" onkeyup="checkRegInput()" required>
+
+            <label for="usernameReg">Username:</label>
+            <input type="text" id="usernameReg" onkeyup="checkRegInput()" required>
+
+            <label for="passwordReg">Password:</label>
+            <input type="password" id="passwordReg" onkeyup="checkRegInput()">
+
+            <button id="regButton" disabled="'true" onclick="addUser()">Register</button>
+            <p id="reg"></p>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
