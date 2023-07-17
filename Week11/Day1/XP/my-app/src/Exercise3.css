@@ -1,0 +1,23 @@
+h1 {
+    color: red;
+    background-color: lightblue;
+}
+
+img {
+    margin: 20px;
+    width: 800px;
+    height: auto;
+}
+
+li {
+    line-height: 2;
+    font-size: 16px;
+}
+
+.para {
+    background-color: #282c34;
+    color: yellowgreen;
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+  }
