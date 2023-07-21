@@ -15,7 +15,7 @@ export const register = async (first_name, last_name, email, username, hash) => 
     } catch (error) {
         console.log(error);
         await trx.rollback();
-        throw new Error(error.message)
+        throw error;
     }
 }
 

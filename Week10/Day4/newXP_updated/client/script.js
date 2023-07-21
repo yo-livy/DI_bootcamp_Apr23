@@ -82,13 +82,14 @@ const logUser = async () => {
       body: JSON.stringify(data)
     });
     const parsedResponse = await response.json();
-    if(response.status === 200){
-      console.log(parsedResponse)
-      logMsg.innerText = parsedResponse;
-    } else {
-      console.log(parsedResponse);
-      logMsg.innerText = parsedResponse;
-    }
+    logMsg.innerText = parsedResponse;
+    // if(response.status === 200){
+    //   console.log(parsedResponse)
+    //   logMsg.innerText = parsedResponse;
+    // } else {
+    //   console.log(parsedResponse);
+    //   logMsg.innerText = parsedResponse;
+    // }
   } catch (error) {
     console.log(error);
   }
