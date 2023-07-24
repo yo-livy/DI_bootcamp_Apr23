@@ -1,5 +1,6 @@
 import './App.css';
 import Cars from './components/Cars';
+import Color from './components/Color';
 import Events from './components/Events';
 import Phone from './components/Phone';
 
@@ -12,6 +13,7 @@ function App() {
         <Cars name={carinfo.name} model={carinfo.model} />
         <Events />
         <Phone />
+        <Color />
       </header>
     </div>
   );
