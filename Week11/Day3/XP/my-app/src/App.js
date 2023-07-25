@@ -3,14 +3,24 @@ import './App.css';
 import BuggyCounter from './components/BuggyCounter';
 import Color from './components/Color';
 import ColorF from './components/ColorF';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <BuggyCounter /> */}
+        <ErrorBoundary>
+          <BuggyCounter />
+          <BuggyCounter />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <BuggyCounter />
+        </ErrorBoundary>
+        <BuggyCounter />
+        
+        
         {/* <Color /> */}
-        <ColorF />
+        {/* <ColorF /> */}
       </header>
     </div>
   );
