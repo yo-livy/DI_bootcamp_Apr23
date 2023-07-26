@@ -16,8 +16,8 @@ const FetchPost = () => {
                 },
                 body: JSON.stringify(dataToSend)
             })
-            const data = await res.json();
-            console.log(data);
+
+            console.log(res);
         } catch (error) {
             console.log(error)
         }
