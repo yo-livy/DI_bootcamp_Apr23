@@ -1,0 +1,50 @@
+.main {
+    display:flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card-container {
+    width: 550px;
+    height: fit-content;
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: white;
+    margin: 100px auto;
+  }
+
+  @keyframes slideInFromTop {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .author {
+    text-align: right;
+    font-style: italic;
+  }
+
+  .text-container {
+    animation: slideInFromTop 1.2s ease-in-out;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .new-quote-button {
+    font-size: 14px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 30px;
+  }
+
