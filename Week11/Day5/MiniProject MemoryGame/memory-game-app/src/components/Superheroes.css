@@ -1,0 +1,32 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.title1 {
+    background-color: red;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.scores {
+    text-align: right;
+    margin-right: 100px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.title2 {
+    background: linear-gradient(to right, red, rgb(162, 20, 181));
+    color: white;
+    padding: 10px 0;
+    margin-top: 5px;
+}
+
+
+
